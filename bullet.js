@@ -1,7 +1,4 @@
-import { gsap } from "gsap";
 import * as THREE from 'three';
-import Player from '/public/scripts/player';
-import Enemy from '/public/scripts/enemy';
 
 export default class Bullet{
 	static bullets = []

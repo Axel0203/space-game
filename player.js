@@ -1,7 +1,6 @@
 import { gsap } from "gsap";
 import * as THREE from 'three';
-import Bullet from '/public/scripts/bullet';
-import Enemy from '/public/scripts/enemy';
+import Bullet from '/bullet';
 
 export default class Player{
 	scene

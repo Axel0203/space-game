@@ -2,9 +2,9 @@ import './style.css'
 
 import { gsap } from "gsap";
 import * as THREE from 'three';
-import Player from './public/scripts/player';
-import Enemy from './public/scripts/enemy';
-import Bullet from './public/scripts/bullet';
+import Player from '/player';
+import Enemy from '/enemy';
+import Bullet from '/bullet';
 
 if (navigator.userAgent.match(/Android/i)
          || navigator.userAgent.match(/webOS/i)

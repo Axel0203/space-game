@@ -1,7 +1,5 @@
-import { gsap } from "gsap";
 import * as THREE from 'three';
-import Player from '/public/scripts/player';
-import Bullet from '/public/scripts/bullet';
+
 export default class Enemy{
 	static enemies = []
 	static speed = 0.01
