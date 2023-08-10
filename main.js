@@ -85,9 +85,6 @@ directionalLight.position.set(8,1,8)
 directionalLight.lookAt(8,8,0)
 scene.add( directionalLight );
 
-const axesHelper = new THREE.AxesHelper( 5 );
-scene.add( axesHelper );
-
 camera.position.set(8,8.3,12)
 camera.lookAt(new THREE.Vector3(8,8.3,0))
 
