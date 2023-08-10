@@ -9,6 +9,7 @@ import gameMusicUrl from '/sounds/gameMusic.mp3'
 import winSoundUrl from '/sounds/winSound.mp3'
 import loseSoundUrl from '/sounds/loseSound.mp3'
 import spaceTextureUrl from "/textures/space.jpg"
+import shootAudioUrl from '/sounds/shoot.mp3'
 
 if (navigator.userAgent.match(/Android/i)
          || navigator.userAgent.match(/webOS/i)
@@ -100,6 +101,8 @@ document.body.addEventListener('keydown',(event) =>{
 		break;
 	case ' ':
 		player.shoot()
+		var shootAudio = new Audio(shootAudioUrl); 
+        shootAudio.play();
 		break;
 	default:
 		console.log(`keypressed`);

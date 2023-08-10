@@ -44,7 +44,6 @@ export default class Player{
 		bullet.capsule.position.set(this.mesh.position.x,this.mesh.position.y,this.mesh.position.z)
 		Bullet.bullets.push(bullet)
 		this.scene.add( bullet.capsule );
-        var audio = new Audio('/sounds/shoot.mp3'); 
-        audio.play();
+
 	}
 }
