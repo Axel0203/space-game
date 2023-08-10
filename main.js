@@ -5,6 +5,10 @@ import * as THREE from 'three';
 import Player from '/player';
 import Enemy from '/enemy';
 import Bullet from '/bullet';
+import gameMusicUrl from '/sounds/gameMusic.mp3'
+import winSoundUrl from '/sounds/winSound.mp3'
+import loseSoundUrl from '/sounds/loseSound.mp3'
+import spaceTextureUrl from "/textures/space.jpg"
 
 if (navigator.userAgent.match(/Android/i)
          || navigator.userAgent.match(/webOS/i)
@@ -31,10 +35,11 @@ const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.inner
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 const canvas = renderer.domElement 
-const gameMusic = new Audio('/sounds/gameMusic.mp3');
+const gameMusic = new Audio(gameMusicUrl);
 gameMusic.volume = 0.1
-const winSound = new Audio('/sounds/winSound.mp3'); 
-const loseSound = new Audio('/sounds/loseSound.mp3'); 
+const winSound = new Audio(winSoundUrl); 
+const loseSound = new Audio(loseSoundUrl); 
+const spaceTexture = new THREE.TextureLoader().load(spaceTextureUrl)
 document.body.appendChild( canvas );
 
 const player = new Player(new THREE.ConeGeometry( 1, 1,3 ) , new THREE.MeshStandardMaterial( {color: 0x0B3D91} ),scene);
@@ -53,7 +58,6 @@ const createEnemies = () =>{
 }
 createEnemies()
 
-const spaceTexture = new THREE.TextureLoader().load("/textures/space.jpg")
 scene.background = spaceTexture
 
 
